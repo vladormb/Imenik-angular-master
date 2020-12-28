@@ -1,0 +1,9 @@
+<div class="directory-contact">
+  <div class="directory-contact-content">
+    <span class="data">{{ contact.name }}: {{ contact.phone }}</span>
+  </div>
+  <div class="directory-contact-date">
+    <span class="month">{{ contact.date.toLocaleString('default', { day: 'numeric'})}}.{{ contact.date.toLocaleString('default', { month: 'numeric'}) }}.{{ contact.date.toLocaleString('default', { year: 'numeric'})}}</span>
+  </div>
+  <span class="delete-btn" title="delete" (click)="this.contactsService.deleteContact(contact)"></span>
+</div>

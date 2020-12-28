@@ -1,0 +1,4 @@
+<input id="contact-name"  type="text" placeholder="insert contact name" (keyup.enter)="this.contactsService.addContact(contactName.value, contactPhone.value)" #contactName/>
+<input id="contact-number" onkeypress='return event.charCode > 47 && event.charCode <= 57' type="text" placeholder="insert phone" (keyup.enter)="this.contactsService.addContact(contactName.value, contactPhone.value)" #contactPhone/>
+
+<span id="add-btn" (click)="this.contactsService.addContact(contactName.value, contactPhone.value)">Add new contact</span>
